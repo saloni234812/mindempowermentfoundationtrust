@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+
+  --color-bg-base: var(--background-custom);
+  --color-bg-muted: var(--background-secondary);
+  --color-txt-base: var(--text-primary);
+  --color-txt-muted: var(--text-secondary);
+  --color-border-base: var(--border-custom);
+}
+
+:root {
+  --font-scale: 1.0;
+  font-size: calc(16px * var(--font-scale));
+
+  /* Primary: logo orange — energetic, warm, empowering */
+  --primary: #E04F00;
+  --primary-hover: #B83F00;
+
+  /* Secondary: logo green — growth, wellness, nature */
+  --secondary: #1B5E20;
+  --secondary-hover: #0E3F15;
+
+  /* Accent: logo gold/yellow accent */
+  --accent: #F9A825;
+  --accent-hover: #F57F17;
+
+  /* Surfaces — pure white + near-white sections                               */
+  --background-custom:   #FFFFFF;
+  --background-secondary: #FAFAF8;   /* warm off-white for alternating sections */
+
+  /* Text — dark charcoal hierarchy                                            */
+  --text-primary:   #1C1917;         /* near-black, warm undertone              */
+  --text-secondary: #57534E;         /* stone-600 for supporting copy           */
+
+  /* Borders — gossamer light                                                  */
+  --border-custom: #E7E5E4;          /* stone-200                               */
+
+  /* Shadows — feather-soft                                                    */
+  --shadow-sm: 0 1px 3px 0 rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px -2px rgba(0,0,0,0.07), 0 2px 6px -2px rgba(0,0,0,0.04);
+  --shadow-lg: 0 12px 24px -4px rgba(0,0,0,0.08), 0 4px 8px -2px rgba(0,0,0,0.04);
+}
+
+/* Dark Mode — deep stone/slate keeping the orange-green accent */
+.dark {
+  --background-custom:    #141210;
+  --background-secondary: #1C1917;
+  --text-primary:  #FAFAF8;
+  --text-secondary: #A8A29E;
+  --border-custom: #292524;
+
+  --primary: #FF8F00;
+  --primary-hover: #E04F00;
+  --secondary: #66BB6A;
+  --secondary-hover: #1B5E20;
+  --accent: #FFCA28;
+  --accent-hover: #F9A825;
+
+  --shadow-sm: 0 1px 3px 0 rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px -2px rgba(0,0,0,0.4);
+  --shadow-lg: 0 12px 24px -4px rgba(0,0,0,0.5);
+}
+
+/* High Contrast Mode overrides */
+.high-contrast {
+  --primary: #00FFFF !important;
+  --primary-hover: #00CCCC !important;
+  --secondary: #FFFF00 !important;
+  --secondary-hover: #CCCC00 !important;
+  --accent: #00FF00 !important;
+  --accent-hover: #00CC00 !important;
+
+  --background-custom: #000000 !important;
+  --background-secondary: #000000 !important;
+  --text-primary: #FFFFFF !important;
+  --text-secondary: #FFFF00 !important;
+  --border-custom: #FFFFFF !important;
+
+  --shadow-sm: none !important;
+  --shadow-md: none !important;
+  --shadow-lg: none !important;
+}
+
+/* Focus outline for keyboard navigation */
+*:focus-visible {
+  outline: 3px solid var(--primary) !important;
+  outline-offset: 2px !important;
+}
+
+body {
+  background-color: var(--background-custom);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Accessibility Text Scaling */
+.text-scale-normal {
+  --font-scale: 1.0;
+}
+
+.text-scale-large {
+  --font-scale: 1.15;
+}
+
+.text-scale-xlarge {
+  --font-scale: 1.30;
+}
+
+/* Custom Masonry / Helper layouts */
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1.5rem;
+}
