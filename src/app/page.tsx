@@ -82,18 +82,14 @@ export default async function HomePage() {
                 </div>
               </ScrollReveal>
 
-              {/* Hero Visual — Premium Agency-Grade 3D Globe Cluster */}
+              {/* Hero Visual — Official MEFT Logo */}
               <ScrollReveal direction="left" className="lg:col-span-5 flex justify-center items-center">
                 <div className="relative flex flex-col items-center justify-center py-4">
                   {/* Soft glow */}
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/15 via-accent/10 to-secondary/15 blur-3xl opacity-60 pointer-events-none" />
-                  {/* Premium 3D Graphic */}
-                  <div className="relative z-10 h-80 w-80 sm:h-[22rem] sm:w-[22rem] lg:h-[24rem] lg:w-[24rem] transition-transform duration-500 hover:scale-[1.03] select-none pointer-events-none">
-                    <img 
-                      src="/images/hero_3d_globe.png" 
-                      alt="MEFT Community Visual" 
-                      className="h-full w-full object-contain filter drop-shadow-xl" 
-                    />
+                  {/* Logo — big in a perfect circle */}
+                  <div className="relative z-10 h-80 w-80 sm:h-[22rem] sm:w-[22rem] lg:h-[24rem] lg:w-[24rem] rounded-full overflow-hidden bg-white flex items-center justify-center p-10 shadow-2xl border border-primary/5 transition-transform duration-500 hover:scale-[1.03]">
+                    <Logo className="h-full w-full" />
                   </div>
                 </div>
               </ScrollReveal>
@@ -259,9 +255,9 @@ export default async function HomePage() {
                   </div>
                   <div>
                     <img
-                      src="/images/donate_3d_vessel.png"
-                      alt="Support Mind Empowerment Foundation Trust"
-                      className="rounded-2xl shadow-md border border-border-base object-contain w-full max-h-80 select-none pointer-events-none"
+                      src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800"
+                      alt="Tree plantation drive by Mind Empowerment Foundation Trust"
+                      className="rounded-2xl shadow-md border border-border-base object-cover w-full aspect-video"
                     />
                   </div>
                 </div>

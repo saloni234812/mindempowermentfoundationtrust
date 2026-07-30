@@ -54,22 +54,13 @@ export default function AboutPage() {
       <main id="main-content" className="flex-grow bg-bg-base py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
           {/* Page Title & Vision */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center border-b border-border-base pb-12">
-            <div className="space-y-4 text-left">
-              <h1 className="font-heading text-4xl sm:text-5xl font-bold tracking-tight text-txt-base">
-                Who We Are & What Drives Us
-              </h1>
-              <p className="text-sm sm:text-base text-txt-muted leading-relaxed">
-                Mind Empowerment Foundation Trust is built on the belief that a healthy mind, a skilled hand, and access to knowledge can lift families out of structural hardship. Our target is to build stronger minds and a greener world through sustainable community interventions.
-              </p>
-            </div>
-            <div className="flex justify-center select-none pointer-events-none">
-              <img 
-                src="/images/about_3d_sphere.png" 
-                alt="MEFT Unified Vision Globe" 
-                className="h-64 w-64 md:h-80 md:w-80 object-contain filter drop-shadow-lg" 
-              />
-            </div>
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <h1 className="font-heading text-4xl font-bold tracking-tight text-txt-base">
+              Who We Are & What Drives Us
+            </h1>
+            <p className="text-base text-txt-muted leading-relaxed">
+              Mind Empowerment Foundation Trust is built on the belief that a healthy mind, a skilled hand, and access to knowledge can lift families out of structural hardship.
+            </p>
           </div>
 
           {/* History & Founder Message */}
