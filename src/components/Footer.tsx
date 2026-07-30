@@ -35,7 +35,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="flex flex-col gap-4">
             <Link href="/" className="focus:outline-none flex items-center">
-              <div className="h-20 w-20 sm:h-24 sm:w-24 rounded-full bg-white flex items-center justify-center p-3 shadow-md border border-border-base transition-all hover:shadow-lg hover:scale-105">
+              <div className="h-20 w-20 sm:h-24 sm:w-24 rounded-full overflow-hidden bg-white flex items-center justify-center p-3 shadow-md border border-border-base transition-all hover:shadow-lg hover:scale-105">
                 <Logo className="h-full w-full" />
               </div>
             </Link>

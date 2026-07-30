@@ -88,7 +88,7 @@ export default async function HomePage() {
                   {/* Soft glow */}
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/15 via-accent/10 to-secondary/15 blur-3xl opacity-60 pointer-events-none" />
                   {/* Logo — big in a perfect circle */}
-                  <div className="relative z-10 h-80 w-80 sm:h-[22rem] sm:w-[22rem] lg:h-[24rem] lg:w-[24rem] rounded-full bg-white flex items-center justify-center p-10 shadow-2xl border border-primary/5 transition-transform duration-500 hover:scale-[1.03]">
+                  <div className="relative z-10 h-80 w-80 sm:h-[22rem] sm:w-[22rem] lg:h-[24rem] lg:w-[24rem] rounded-full overflow-hidden bg-white flex items-center justify-center p-10 shadow-2xl border border-primary/5 transition-transform duration-500 hover:scale-[1.03]">
                     <Logo className="h-full w-full" />
                   </div>
                 </div>
@@ -157,7 +157,7 @@ export default async function HomePage() {
                       />
                       {/* Logo watermark overlay for Corporate photo */}
                       {item.img.includes("activity_7.jpg") && (
-                        <div className="absolute top-3 right-3 z-20 h-10 w-10 bg-white/95 rounded-full p-1.5 shadow-md border border-white/20 select-none pointer-events-none flex items-center justify-center">
+                        <div className="absolute top-3 right-3 z-20 h-10 w-10 bg-white/95 rounded-full overflow-hidden p-1.5 shadow-md border border-white/20 select-none pointer-events-none flex items-center justify-center">
                           <img src="/logo.png" alt="MEFT Logo" className="h-full w-full object-contain" />
                         </div>
                       )}

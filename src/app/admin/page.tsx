@@ -63,7 +63,7 @@ export default function AdminPage() {
           <div className="bg-bg-muted border border-border-base rounded-3xl p-8 max-w-sm w-full space-y-6 shadow-md">
             <div className="text-center space-y-2">
               <div className="flex justify-center">
-                <div className="h-24 w-24 rounded-full bg-white flex items-center justify-center p-3.5 shadow-md border border-border-base">
+                <div className="h-24 w-24 rounded-full overflow-hidden bg-white flex items-center justify-center p-3.5 shadow-md border border-border-base">
                   <Logo className="h-full w-full" />
                 </div>
               </div>
