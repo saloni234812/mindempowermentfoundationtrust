@@ -133,7 +133,7 @@ export default async function HomePage() {
                 },
                 {
                   img: "/images/activity_7.jpg",
-                  title: "Mind Empowerment Program for Corporate Junction Escalator",
+                  title: "Mind Empowerment Program for Johnson Lifts & Escalators",
                   subtitle: "Bhubaneswar · June 2024",
                   href: "/gallery"
                 }

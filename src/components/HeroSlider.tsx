@@ -26,7 +26,7 @@ const slides = [
   {
     image: "/images/activity_7.jpg",
     title: "Mind Empowerment Program",
-    desc: "Corporate session at Junction Escalator",
+    desc: "Corporate session at Johnson Lifts & Escalators",
     className: "brightness-[1.12] contrast-[1.04] saturate-[1.02]"
   },
   {

@@ -73,7 +73,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: "g7",
-    title: "Mind Empowerment Program for Corporate Junction Escalator",
+    title: "Mind Empowerment Program for Johnson Lifts & Escalators",
     category: "mind-training",
     type: "photo",
     url: "/images/activity_7.jpg",
