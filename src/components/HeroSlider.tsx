@@ -30,12 +30,6 @@ const slides = [
     className: "brightness-[1.12] contrast-[1.04] saturate-[1.02]"
   },
   {
-    image: "/images/activity_12.jpg",
-    title: "Mind Power Workshop",
-    desc: "GAINMAX Mind Power Academy program",
-    className: "brightness-[1.12] contrast-[1.06] saturate-[1.02]"
-  },
-  {
     image: "/images/activity_15.jpg",
     title: "Felicitation at Jio Finance",
     desc: "Mind Programming Program, Bhubaneswar",
