@@ -34,12 +34,6 @@ const slides = [
     title: "Felicitation at Jio Finance",
     desc: "Mind Programming Program, Bhubaneswar",
     className: "brightness-[1.10] contrast-[1.06] saturate-[1.02]"
-  },
-  {
-    image: "/images/activity_16.jpg",
-    title: "Workshop",
-    desc: "Powers of Subconscious Mind - Mind Programming session",
-    className: "brightness-[1.08] contrast-[1.05] saturate-[1.02]"
   }
 ];
 
