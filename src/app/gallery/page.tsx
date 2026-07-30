@@ -326,7 +326,7 @@ export default function GalleryPage() {
                   {/* Logo overlay badge on the photo itself (watermark style) */}
                   {(item.url.includes("activity_7.jpg") || item.url.includes("activity_12.jpg") || item.url.includes("activity_16.jpg")) && (
                     <div className="absolute top-3 right-3 z-20 h-10 w-10 bg-white/95 rounded-full overflow-hidden p-1.5 shadow-md border border-white/20 select-none pointer-events-none flex items-center justify-center">
-                      <img src="/logo.png" alt="MEFT Logo" className="h-full w-full object-contain" />
+                      <img src="/logo.png" alt="MEFT Logo" className="h-full w-full object-cover scale-[1.75] origin-top" />
                     </div>
                   )}
                   {/* Subtle camera icon indicator on hover */}
@@ -430,7 +430,7 @@ export default function GalleryPage() {
               />
               {(activeMedia.includes("activity_7.jpg") || activeMedia.includes("activity_12.jpg") || activeMedia.includes("activity_16.jpg")) && (
                 <div className="absolute top-4 right-4 z-20 h-12 w-12 bg-white/95 rounded-full overflow-hidden p-2 shadow-lg border border-white/10 select-none pointer-events-none flex items-center justify-center">
-                  <img src="/logo.png" alt="MEFT Logo" className="h-full w-full object-contain" />
+                  <img src="/logo.png" alt="MEFT Logo" className="h-full w-full object-cover scale-[1.75] origin-top" />
                 </div>
               )}
             </div>

@@ -158,7 +158,7 @@ export default async function HomePage() {
                       {/* Logo watermark overlay for Corporate photo */}
                       {item.img.includes("activity_7.jpg") && (
                         <div className="absolute top-3 right-3 z-20 h-10 w-10 bg-white/95 rounded-full overflow-hidden p-1.5 shadow-md border border-white/20 select-none pointer-events-none flex items-center justify-center">
-                          <img src="/logo.png" alt="MEFT Logo" className="h-full w-full object-contain" />
+                          <img src="/logo.png" alt="MEFT Logo" className="h-full w-full object-cover scale-[1.75] origin-top" />
                         </div>
                       )}
                     </div>
