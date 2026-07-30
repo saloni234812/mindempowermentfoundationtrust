@@ -289,7 +289,7 @@ export const mockBlogPosts: BlogPost[] = [
     content: `<p>When we give a woman a sewing machine, we give her a tool. But tools alone cannot break long-standing socioeconomic barriers. True empowerment happens when that tool is combined with three elements: professional designs skill, financial literacy, and a support network.</p>
     <p>Through the 'Shakti' initiative, we teach women how to compute profit margins, negotiate raw material costs, maintain bank accounts, and form self-help groups. In groups, women support each other's micro-credit needs, removing their reliance on exploitative local moneylenders.</p>
     <p>In our newest center in West Bengal, we saw a group of 30 women pool their savings to buy bulk materials directly from wholesale distributors, instantly doubling their profit margins. That is financial literacy in action.</p>`,
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800",
+    image: "/images/activity_11.jpg",
     category: "Women Empowerment",
     author: "Mrs. Reena Sen (Program Director)",
     date: "June 25, 2026",
