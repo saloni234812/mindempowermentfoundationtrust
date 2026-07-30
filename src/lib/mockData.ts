@@ -275,7 +275,7 @@ export const mockBlogPosts: BlogPost[] = [
     content: `<p>In rural areas across India, mental health issues are often wrapped in stigma, superstition, or simply dismissed due to lack of understanding. Individuals experiencing depression, anxiety, or cognitive differences are frequently isolated or denied care. </p>
     <p>Through our 'Swasth Mann' camps, we encountered families who believed that psychological disorders were caused by negative spirits. Over months of regular outreach, community storytelling, and involving trusted local leaders, we have begun to see a paradigm shift. Today, families are proactively visiting our clinics, asking for counseling, and recognizing that mental health is a fundamental component of physical well-being.</p>
     <p>Educating children in schools has been particularly impactful. When we teach kids how to recognize and speak about stress, bullying, or sadness, they take these lessons back to their parents. This child-led community awareness is the key to lasting change.</p>`,
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800",
+    image: "/images/activity_3.jpg",
     category: "Mental Wellness",
     author: "Dr. Saloni Mohanty (Trustee & Psychologist)",
     date: "July 10, 2026",
