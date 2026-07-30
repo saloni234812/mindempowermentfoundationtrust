@@ -93,20 +93,11 @@ export default function HeroSlider() {
             exit="exit"
             className="absolute inset-0 w-full h-full flex items-center justify-center bg-[#0d0d0d]"
           >
-            {/* Blurred background copy for rich HD effect (filling the rest of the canvas) */}
-            <div className="absolute inset-0 filter blur-2xl opacity-35 scale-110">
-              <img
-                src={slides[currentIndex].image}
-                alt=""
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Sharp main image - 100% full photo */}
+            {/* Sharp main image - 100% full-cover photo */}
             <img
               src={slides[currentIndex].image}
               alt={slides[currentIndex].title}
-              className={`relative z-10 max-w-full max-h-full object-contain mx-auto shadow-2xl ${slides[currentIndex].className}`}
+              className={`w-full h-full object-cover ${slides[currentIndex].className}`}
             />
           </motion.div>
         </AnimatePresence>
