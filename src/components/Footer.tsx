@@ -35,7 +35,9 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="flex flex-col gap-4">
             <Link href="/" className="focus:outline-none flex items-center">
-              <Logo className="h-24 w-24 sm:h-28 sm:w-28" />
+              <div className="h-20 w-20 sm:h-24 sm:w-24 rounded-full bg-white flex items-center justify-center p-3 shadow-md border border-border-base transition-all hover:shadow-lg hover:scale-105">
+                <Logo className="h-full w-full" />
+              </div>
             </Link>
             <p className="text-sm text-txt-muted leading-relaxed">
               We empower individuals and communities through structured <strong>mind programming classes</strong> and active <strong>tree plantation drives</strong> — building stronger minds and a greener world together.

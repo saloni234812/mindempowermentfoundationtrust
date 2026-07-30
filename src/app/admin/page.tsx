@@ -63,7 +63,9 @@ export default function AdminPage() {
           <div className="bg-bg-muted border border-border-base rounded-3xl p-8 max-w-sm w-full space-y-6 shadow-md">
             <div className="text-center space-y-2">
               <div className="flex justify-center">
-                <Logo className="h-32 w-32" />
+                <div className="h-24 w-24 rounded-full bg-white flex items-center justify-center p-3.5 shadow-md border border-border-base">
+                  <Logo className="h-full w-full" />
+                </div>
               </div>
               <h1 className="font-heading text-xl font-bold text-txt-base">Admin Portal</h1>
               <p className="text-xxs text-txt-muted">Provide credential codes to enter trust ledger dashboard.</p>
