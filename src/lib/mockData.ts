@@ -85,7 +85,7 @@ export const mockPrograms: Program[] = [
     title: "Mind Programming Classes",
     tagline: "Unlocking human potential through structured mental empowerment.",
     description: "Structured classes teaching mindfulness, focus, stress management, and positive thinking to individuals and communities.",
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800",
+    image: "/images/activity_5.jpg",
     icon: "BrainCircuit",
     longDescription: "Our Mind Programming Classes are the core of what we do. We offer structured, accessible programs that teach practical mental empowerment techniques — including mindfulness meditation, focus building, emotional resilience, stress management, and positive thinking. Sessions are conducted in community halls, schools, and corporate venues. Our trained facilitators work with participants of all ages and backgrounds to help them achieve clarity, confidence, and inner calm.",
     keyHighlights: [
