@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AccessibilityMenu from "@/components/AccessibilityMenu";
 import { Camera, Calendar, Play, X } from "lucide-react";
+import BounceCards from "@/components/BounceCards";
 
 interface GalleryItem {
   id: string;
@@ -217,13 +218,34 @@ export default function GalleryPage() {
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
           {/* Header */}
-          <div className="text-center max-w-3xl mx-auto space-y-4">
-            <h1 className="font-heading text-4xl font-bold tracking-tight text-txt-base">
-              Outreach Media Gallery
-            </h1>
-            <p className="text-sm text-txt-muted leading-relaxed">
-              Snapshots of our dynamic ground operations, community counseling seminars, and student kits distribution drives.
-            </p>
+          <div className="text-center max-w-3xl mx-auto space-y-6">
+            <div className="space-y-3">
+              <h1 className="font-heading text-4xl font-bold tracking-tight text-txt-base">
+                Outreach Media Gallery
+              </h1>
+              <p className="text-sm text-txt-muted leading-relaxed">
+                Snapshots of our dynamic ground operations, community counseling seminars, and student kits distribution drives.
+              </p>
+            </div>
+            
+            {/* Interactive Polaroid Stack Header Visual */}
+            <div className="flex justify-center py-2 select-none">
+              <BounceCards
+                images={[
+                  "/images/activity_1.jpg",
+                  "/images/activity_3.jpg",
+                  "/images/activity_5.jpg",
+                  "/images/activity_7.jpg",
+                  "/images/activity_11.jpg"
+                ]}
+                containerWidth="100%"
+                containerHeight={280}
+                animationDelay={0.5}
+                animationStagger={0.08}
+                easeType="elastic.out(1, 0.6)"
+                enableHover={true}
+              />
+            </div>
           </div>
 
           {/* Filter Navigation */}
