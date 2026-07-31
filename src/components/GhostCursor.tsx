@@ -303,7 +303,16 @@ const GhostCursor = ({
     const mesh = new THREE.Mesh(geom, material);
     scene.add(mesh);
 
-    const composer = new EffectComposer(renderer);
+    const size = renderer.getSize(new THREE.Vector2());
+    const renderTarget = new THREE.WebGLRenderTarget(Math.max(1, size.x), Math.max(1, size.y), {
+      format: THREE.RGBAFormat,
+      type: THREE.UnsignedByteType,
+      minFilter: THREE.LinearFilter,
+      magFilter: THREE.LinearFilter,
+      stencilBuffer: false,
+      depthBuffer: false
+    });
+    const composer = new EffectComposer(renderer, renderTarget);
     composerRef.current = composer;
 
     const renderPass = new RenderPass(scene, camera);
