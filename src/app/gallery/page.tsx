@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import AccessibilityMenu from "@/components/AccessibilityMenu";
 import { Camera, Calendar, Play, X } from "lucide-react";
 import BounceCards from "@/components/BounceCards";
+import Masonry from "@/components/Masonry";
 
 interface GalleryItem {
   id: string;
@@ -208,6 +209,19 @@ export default function GalleryPage() {
     (item) => filter === "all" || item.category === filter
   );
 
+  const enhancedItems = React.useMemo(() => {
+    const heights = [360, 460, 410, 340, 480, 390, 430, 370, 450, 400];
+    return filteredItems.map((item, idx) => {
+      const height = heights[idx % heights.length];
+      return {
+        ...item,
+        img: item.thumbnail,
+        url: item.url,
+        height
+      };
+    });
+  }, [filteredItems]);
+
   return (
     <>
       <Header />
@@ -270,107 +284,20 @@ export default function GalleryPage() {
             ))}
           </div>
 
-          {/* Gallery Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredItems.map((item) => (
-              <div
-                key={item.id}
-                onClick={() => setActiveMedia(item.url)}
-                className="group flex flex-col w-full cursor-pointer focus:outline-none"
-              >
-                {/* Rounded Image Container with custom floating lift shadow */}
-                <div className="aspect-video w-full rounded-2xl overflow-hidden bg-bg-muted border border-border-base relative shadow-sm group-hover:shadow-lg transition-all duration-300">
-                  <img
-                    src={item.thumbnail}
-                    alt={item.title}
-                    className={`w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300 ${
-                      item.url.includes("activity_6.jpg")
-                        ? "brightness-[1.18] contrast-[1.08] saturate-[1.03] object-[50%_15%]"
-                        : ""
-                    } ${
-                      item.url.includes("activity_7.jpg")
-                        ? "brightness-[1.12] contrast-[1.04] saturate-[1.02]"
-                        : ""
-                    } ${
-                      item.url.includes("activity_8.jpg")
-                        ? "scale-[1.08] brightness-[1.06] contrast-[1.08] saturate-[1.02]"
-                        : ""
-                    } ${
-                      item.url.includes("activity_9.jpg")
-                        ? "brightness-[1.14] contrast-[1.06] saturate-[1.04]"
-                        : ""
-                    } ${
-                      item.url.includes("activity_10.jpg")
-                        ? "scale-[1.18] object-[85%_35%] brightness-[1.14] contrast-[1.08] saturate-[1.03]"
-                        : ""
-                    } ${
-                      item.url.includes("activity_11.jpg")
-                        ? "brightness-[1.10] contrast-[1.04] saturate-[1.02]"
-                        : ""
-                    } ${
-                      item.url.includes("activity_12.jpg")
-                        ? "brightness-[1.12] contrast-[1.06] saturate-[1.02]"
-                        : ""
-                    } ${
-                      item.url.includes("activity_13.jpg")
-                        ? "brightness-[1.05] contrast-[1.06] saturate-[1.02]"
-                        : ""
-                    } ${
-                      item.url.includes("activity_14.jpg")
-                        ? "brightness-[1.10] contrast-[1.05] saturate-[1.02]"
-                        : ""
-                    } ${
-                      item.url.includes("activity_15.jpg")
-                        ? "brightness-[1.10] contrast-[1.06] saturate-[1.02]"
-                        : ""
-                    } ${
-                      item.url.includes("activity_16.jpg")
-                        ? "brightness-[1.08] contrast-[1.05] saturate-[1.02]"
-                        : ""
-                    } ${
-                      item.url.includes("activity_17.jpg")
-                        ? "brightness-[1.10] contrast-[1.05] saturate-[1.02]"
-                        : ""
-                    } ${
-                      item.url.includes("activity_18.jpg")
-                        ? "brightness-[1.10] contrast-[1.05] saturate-[1.02]"
-                        : ""
-                    } ${
-                      item.url.includes("activity_19.jpg")
-                        ? "brightness-[1.10] contrast-[1.05] saturate-[1.02]"
-                        : ""
-                    } ${
-                      item.url.includes("activity_20.jpg")
-                        ? "brightness-[1.10] contrast-[1.05] saturate-[1.02]"
-                        : ""
-                    }`}
-                  />
-                  {/* Logo overlay badge on the photo itself (watermark style) */}
-                  {(item.url.includes("activity_7.jpg") || item.url.includes("activity_12.jpg") || item.url.includes("activity_16.jpg")) && (
-                    <div className="absolute top-3 right-3 z-20 h-10 w-10 bg-white/95 rounded-full overflow-hidden p-1.5 shadow-md border border-white/20 select-none pointer-events-none flex items-center justify-center">
-                      <img src="/logo.png" alt="MEFT Logo" className="h-full w-full object-cover scale-[1.75] origin-top" />
-                    </div>
-                  )}
-                  {/* Subtle camera icon indicator on hover */}
-                  <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="rounded-full bg-white/20 p-3 backdrop-blur-md text-white">
-                      {item.type === "video" ? <Play className="h-5 w-5 fill-white" /> : <Camera className="h-5 w-5" />}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Text details below the image */}
-                <div className="mt-4 space-y-1 px-1">
-                  <h3 className="font-heading text-sm font-bold text-txt-base leading-snug group-hover:text-primary transition-colors">
-                    {item.title}
-                  </h3>
-                  <div className="flex items-center gap-1 text-xxs text-txt-muted">
-                    <Calendar className="h-3.5 w-3.5 text-primary" />
-                    <span>{item.date}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
+          {/* Gallery Grid using GSAP Masonry */}
+          <div className="relative w-full">
+            <Masonry
+              items={enhancedItems}
+              ease="power3.out"
+              duration={0.6}
+              stagger={0.03}
+              animateFrom="bottom"
+              scaleOnHover={true}
+              hoverScale={0.96}
+              blurToFocus={true}
+              colorShiftOnHover={true}
+              onItemClick={(item) => setActiveMedia(item.url)}
+            />
           </div>
         </div>
 
