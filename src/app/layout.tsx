@@ -3,7 +3,6 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { AccessibilityProvider } from "@/components/AccessibilityContext";
 import WhatsAppChat from "@/components/WhatsAppChat";
-import GhostCursor from "@/components/GhostCursor";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,14 +36,6 @@ export default function RootLayout({
         <AccessibilityProvider>
           {children}
           <WhatsAppChat />
-          <GhostCursor 
-            color="#E04F00"
-            brightness={1.2}
-            edgeIntensity={0}
-            trailLength={55}
-            inertia={0.4}
-            zIndex={9999}
-          />
         </AccessibilityProvider>
       </body>
     </html>
