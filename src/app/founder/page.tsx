@@ -98,6 +98,16 @@ const founderPhotos: FounderPhoto[] = [
     height: 450,
     type: "photo",
     category: "Mind Training"
+  },
+  {
+    id: "fp9",
+    img: "/images/activity_21.jpg",
+    url: "/images/activity_21.jpg",
+    title: "Felicitation of Mr. Manoj Kumar Pradhan at Maruti Suzuki Annual RDS Convention, Bhubaneswar",
+    date: "July 2026",
+    height: 400,
+    type: "photo",
+    category: "Honor"
   }
 ];
 

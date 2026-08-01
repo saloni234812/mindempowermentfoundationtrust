@@ -34,6 +34,12 @@ const slides = [
     title: "Felicitation at Jio Finance",
     desc: "Mind Programming Program, Bhubaneswar",
     className: "brightness-[1.10] contrast-[1.06] saturate-[1.02]"
+  },
+  {
+    image: "/images/activity_21.jpg",
+    title: "RDS Annual Convention",
+    desc: "Felicitation of Manoj Kumar Pradhan, Maruti Suzuki",
+    className: "brightness-[1.10] contrast-[1.06] saturate-[1.02]"
   }
 ];
 

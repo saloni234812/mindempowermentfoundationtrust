@@ -199,6 +199,15 @@ const galleryItems: GalleryItem[] = [
     thumbnail: "/images/activity_20.jpg",
     date: "July 2026",
   },
+  {
+    id: "g21",
+    title: "Felicitation of Mr. Manoj Kumar Pradhan at Annual RDS Convention, Maruti Suzuki, Bhubaneswar",
+    category: "culture",
+    type: "photo",
+    url: "/images/activity_21.jpg",
+    thumbnail: "/images/activity_21.jpg",
+    date: "July 2026",
+  },
 ];
 
 export default function GalleryPage() {
